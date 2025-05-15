@@ -69,9 +69,9 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#1A1F2C] text-white flex flex-col">
+    <div className="min-h-screen bg-[#1A1A1A] text-white flex flex-col">
       {/* Шапка */}
-      <header className="sticky top-0 z-10 border-b border-gray-800 bg-[#1A1F2C]/90 backdrop-blur-sm">
+      <header className="sticky top-0 z-10 border-b border-gray-800 bg-[#1A1A1A]/90 backdrop-blur-sm">
         <div className="container mx-auto py-4 px-4 md:px-6 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Icon name="Flame" className="h-8 w-8 text-amber-500" />
@@ -113,7 +113,7 @@ const Index = () => {
             alt="Дрова"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1A1F2C] to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1A1A1A] to-transparent" />
         </div>
 
         <div className="container mx-auto px-4 md:px-6 py-20 h-full flex flex-col justify-center relative z-1">
@@ -139,7 +139,7 @@ const Index = () => {
       </section>
 
       {/* Преимущества */}
-      <section className="py-16 bg-[#1F2535]">
+      <section className="py-16 bg-[#222222]">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center font-['Montserrat']">
             Почему выбирают нас
@@ -168,9 +168,9 @@ const Index = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="bg-[#1A1F2C] p-6 rounded-lg flex flex-col items-center text-center"
+                className="bg-[#1A1A1A] p-6 rounded-lg flex flex-col items-center text-center"
               >
-                <div className="bg-[#2A304A] p-4 rounded-full mb-4">
+                <div className="bg-[#2D2D2D] p-4 rounded-full mb-4">
                   <Icon
                     name={feature.icon}
                     className="h-8 w-8 text-amber-500"
@@ -193,7 +193,7 @@ const Index = () => {
           value={activeTab}
           onValueChange={setActiveTab}
         >
-          <TabsList className="mb-8 bg-[#2A304A] p-1">
+          <TabsList className="mb-8 bg-[#2D2D2D] p-1">
             <TabsTrigger value="каталог">Каталог</TabsTrigger>
             <TabsTrigger value="доставка">Доставка</TabsTrigger>
             <TabsTrigger value="блог">Блог</TabsTrigger>
@@ -204,7 +204,7 @@ const Index = () => {
               {products.map((product) => (
                 <Card
                   key={product.id}
-                  className="bg-[#2A304A] border-none overflow-hidden"
+                  className="bg-[#2D2D2D] border-none overflow-hidden"
                 >
                   <div className="h-48 overflow-hidden">
                     <img
@@ -234,7 +234,7 @@ const Index = () => {
           </TabsContent>
 
           <TabsContent value="доставка">
-            <div className="bg-[#2A304A] rounded-lg p-8">
+            <div className="bg-[#2D2D2D] rounded-lg p-8">
               <h2 className="text-2xl font-bold mb-6 font-['Montserrat']">
                 Условия доставки
               </h2>
@@ -291,7 +291,7 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="mt-8 p-6 bg-[#1A1F2C] rounded-lg">
+              <div className="mt-8 p-6 bg-[#1A1A1A] rounded-lg">
                 <h3 className="text-xl font-bold mb-4 font-['Montserrat']">
                   Как заказать
                 </h3>
@@ -350,7 +350,7 @@ const Index = () => {
               {blogPosts.map((post) => (
                 <div
                   key={post.id}
-                  className="bg-[#2A304A] rounded-lg overflow-hidden"
+                  className="bg-[#2D2D2D] rounded-lg overflow-hidden"
                 >
                   <div className="md:flex">
                     <div className="md:w-1/3 h-60 md:h-auto">
@@ -362,7 +362,7 @@ const Index = () => {
                     </div>
                     <div className="md:w-2/3 p-6">
                       <span className="text-sm text-gray-400">{post.date}</span>
-                      <h3 className="text-xl font-bold mt-2 mb-4 font-['Montserrat']">
+                      <h3 className="text-xl font-bold mt-2 mb-4 font-['Monserr']">
                         {post.title}
                       </h3>
                       <p className="text-gray-300 mb-4">{post.description}</p>
@@ -393,7 +393,7 @@ const Index = () => {
       </main>
 
       {/* Форма заказа */}
-      <section className="py-16 bg-[#2A304A]">
+      <section className="py-16 bg-[#2D2D2D]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 font-['Montserrat']">
@@ -403,23 +403,23 @@ const Index = () => {
               Оставьте заявку, и мы свяжемся с вами для уточнения деталей заказа
             </p>
 
-            <div className="bg-[#1A1F2C] p-8 rounded-lg">
+            <div className="bg-[#1A1A1A] p-8 rounded-lg">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <input
                   type="text"
                   placeholder="Ваше имя"
-                  className="bg-[#2A304A] rounded-md p-3 w-full border-transparent focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none"
+                  className="bg-[#2D2D2D] rounded-md p-3 w-full border-transparent focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none"
                 />
                 <input
                   type="tel"
                   placeholder="Телефон"
-                  className="bg-[#2A304A] rounded-md p-3 w-full border-transparent focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none"
+                  className="bg-[#2D2D2D] rounded-md p-3 w-full border-transparent focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none"
                 />
               </div>
               <textarea
                 placeholder="Опишите ваш заказ (тип дров, количество)"
                 rows={4}
-                className="bg-[#2A304A] rounded-md p-3 w-full mb-4 border-transparent focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none"
+                className="bg-[#2D2D2D] rounded-md p-3 w-full mb-4 border-transparent focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none"
               />
               <Button className="w-full bg-amber-500 hover:bg-amber-600">
                 Отправить заявку
@@ -430,7 +430,7 @@ const Index = () => {
       </section>
 
       {/* Подвал */}
-      <footer className="bg-[#1A1F2C] border-t border-gray-800">
+      <footer className="bg-[#1A1A1A] border-t border-gray-800">
         <div className="container mx-auto px-4 md:px-6 py-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
